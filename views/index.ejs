@@ -7,16 +7,22 @@
 
         <%- include('./partials/nav.ejs')%>
 
+            <h2 class="blog-container-title"> All Blogs</h2>
             <div class="blogs content">
-                <h2> All Blogs</h2>
                 <% if (blogs.length> 0) { %>
                     <% blogs.forEach(blog=> { %>
-                        <h3 class="title">
-                            <%=blog.title%>
-                        </h3>
-                        <p class="snippet">
-                            <%=blog.snippet%>
-                        </p>
+                        <div class="blog-container">
+                            <h3 class="title">
+                                <%=blog.title%>
+                            </h3>
+                            <hr>
+                            <!-- <p class="snippet">
+                                <%=blog.snippet%>
+                            </p> -->
+                            <p>
+                                <%=blog.body%>
+                            </p>
+                        </div>
                         <% })%>
                             <% } else { %>
                                 <h3>There aren't any blogs to show</h3>
