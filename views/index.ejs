@@ -12,13 +12,15 @@
                 <% if (blogs.length> 0) { %>
                     <% blogs.forEach(blog=> { %>
                         <div class="blog-container">
-                            <h3 class="title">
-                                <%=blog.title%>
-                            </h3>
-                            <hr>
-                            <!-- <p class="snippet">
-                                <%=blog.snippet%>
-                            </p> -->
+                            <a class="single" href="/blogs/<%= blog.id %>">
+                                <h3 class="title">
+                                    <%=blog.title%>
+                                </h3>
+                                <hr>
+                                <p class="snippet">
+                                    <%=blog.snippet%>
+                                </p>
+                            </a>
                             <p>
                                 <%=blog.body%>
                             </p>

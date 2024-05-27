@@ -1,12 +1,16 @@
 const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 const Blog = require("./models/blog");
 
 // connects to mongodb
-const dbURI =
-  "mongodb+srv://ayeshanweerasuriya:kkbhanuka1@cluster0.aphbi70.mongodb.net/note-tuts?retryWrites=true&w=majority&appName=Cluster0";
+const dbUsername = process.env.DB_USERNAME;
+const dbPassword = process.env.DB_PASSWORD;
+
+const dbURI = `mongodb+srv://${dbUsername}:${dbPassword}@cluster0.aphbi70.mongodb.net/note-tuts?retryWrites=true&w=majority&appName=Cluster0`;
+
 mongoose
   .connect(dbURI)
   .then((result) => {
@@ -44,6 +48,29 @@ app.post("/blogs", (req, res) => {
     .save()
     .then((result) => {
       res.redirect("/blogs");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+app.get("/blogs/:id", (req, res) => {
+  const id = req.params.id;
+  Blog.findById(id)
+    .then((result) => {
+      res.render("details", { blog: result, title: "Blog Details" });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+app.delete("/blogs/:id", (req, res) => {
+  const id = req.params.id;
+
+  Blog.findByIdAndDelete(id)
+    .then((result) => {
+      res.json({ redirect: "/blogs" });
     })
     .catch((err) => {
       console.log(err);

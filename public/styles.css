@@ -57,7 +57,7 @@ footer {
   margin: 80px auto 20px;
 }
 
-h2 {
+.blog-container-title h2 {
   margin-bottom: 40px;
 }
 
@@ -84,9 +84,9 @@ h3 {
   width: 700px;
 }
 
-/* index styles */
-
-/* details styles */
+.title:hover {
+  font-size: larger;
+}
 
 /* create styles */
 .create-blog form {
@@ -119,4 +119,22 @@ textarea {
   border: 0;
   font-size: 1.2em;
   cursor: pointer;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center;
+}
+
+.details {
+  padding: 20px;
+  border: 1px solid black;
+  margin: 20px;
+  width: 700px;
+  align-self: center;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid black;
 }
