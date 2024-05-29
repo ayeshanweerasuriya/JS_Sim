@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head.ejs')%>
+<%- include('../partials/head.ejs')%>
 
     <body>
 
-        <%- include('./partials/nav.ejs')%>
+        <%- include('../partials/nav.ejs')%>
 
             <!-- <h2 class="blog-container-title"> All Blogs</h2> -->
             <div class="blogs-content">
@@ -21,9 +21,9 @@
                                     <%=blog.snippet%>
                                 </p>
                             </a>
-                            <p>
+                            <!-- <p>
                                 <%=blog.body%>
-                            </p>
+                            </p> -->
                         </div>
                         <% })%>
                             <% } else { %>
@@ -31,6 +31,6 @@
                                 <% } %>
             </div>
     </body>
-    <%- include('./partials/footer.ejs')%>
+    <%- include('../partials/footer.ejs')%>
 
 </html>

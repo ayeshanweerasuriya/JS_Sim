@@ -4,6 +4,8 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const blogRoutes = require('./routes/blogRoutes');
 
+const app = express();
+
 // connects to mongodb
 const dbUsername = process.env.DB_USERNAME;
 const dbPassword = process.env.DB_PASSWORD;
@@ -16,8 +18,6 @@ mongoose
     console.log("Database connected successfully"), app.listen(3000);
   })
   .catch((err) => console.log("Database connection error:", err));
-
-const app = express();
 
 // register vue engine
 app.set("view engine", "ejs");
