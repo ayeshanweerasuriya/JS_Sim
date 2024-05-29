@@ -1,8 +1,7 @@
+require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-require("dotenv").config();
-
 const Blog = require("./models/blog");
 
 // connects to mongodb
@@ -54,6 +53,10 @@ app.post("/blogs", (req, res) => {
     });
 });
 
+app.get("/blogs/create", (req, res) => {
+  res.render("create", { title: "Create a new Blog" });
+});
+
 app.get("/blogs/:id", (req, res) => {
   const id = req.params.id;
   Blog.findById(id)
@@ -79,10 +82,6 @@ app.delete("/blogs/:id", (req, res) => {
 
 app.get("/about", (req, res) => {
   res.render("about", { title: "About" });
-});
-
-app.get("/blogs/create", (req, res) => {
-  res.render("create", { title: "Create a new Blog" });
 });
 
 app.use((req, res) => {

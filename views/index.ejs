@@ -7,8 +7,8 @@
 
         <%- include('./partials/nav.ejs')%>
 
-            <h2 class="blog-container-title"> All Blogs</h2>
-            <div class="blogs content">
+            <!-- <h2 class="blog-container-title"> All Blogs</h2> -->
+            <div class="blogs-content">
                 <% if (blogs.length> 0) { %>
                     <% blogs.forEach(blog=> { %>
                         <div class="blog-container">
@@ -27,7 +27,7 @@
                         </div>
                         <% })%>
                             <% } else { %>
-                                <h3>There aren't any blogs to show</h3>
+                                <p>There aren't any blogs to show</p>
                                 <% } %>
             </div>
     </body>
