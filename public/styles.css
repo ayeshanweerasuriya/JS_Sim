@@ -71,13 +71,23 @@ li a {
 
 /* footer styles */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: small;
-    margin-top: 20px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: small;
 }
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 
 /* about page styles */
 
@@ -92,6 +102,8 @@ footer {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Center text */
 }
 
 .about-title h2 {
@@ -107,6 +119,7 @@ hr {
 .about-content p {
   color: #666;
 }
+
 h4 {
   color: #333;
   font-style: italic;
@@ -209,4 +222,49 @@ button {
 
 button:hover {
   background-color: #00a43c;
+}
+
+/* 404 page */
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.error h2 {
+  font-size: 3rem;
+  padding-bottom: 20px;
+  color: #343a40;
+}
+
+.error p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.error ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.error ul li {
+  font-size: 1rem;
+  color: #6c757d;
+  margin: 0.5rem 0;
+}
+
+.error a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.error a:hover {
+  text-decoration: underline;
 }
