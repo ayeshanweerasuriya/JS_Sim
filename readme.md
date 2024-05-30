@@ -1,4 +1,4 @@
-# Basic Blog Site
+# Blog Site
 
 Welcome! This project was created while learning Node.js and Express.js. The site uses EJS as the view engine to render dynamic web pages.
 
