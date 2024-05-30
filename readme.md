@@ -15,11 +15,13 @@ This blog site allows users to:
 - **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine.
 - **Express.js**: A minimal and flexible Node.js web application framework.
 - **EJS**: A simple templating language that lets you generate HTML markup with plain JavaScript.
+- **MongoDB**: A NoSQL database used for storing application data.
 
 ## Features
 
 - **Express.js Routes**: Easy navigation and handling of different routes.
 - **EJS View Engine**: Dynamic content rendering using EJS templates.
+- **MongoDB Integration**: Robust data storage and retrieval with MongoDB.
 
 ## Preview
 
